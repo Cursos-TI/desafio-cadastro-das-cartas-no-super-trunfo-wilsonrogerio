@@ -5,6 +5,7 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
 // Siga os comentários para implementar cada parte do desafio.
 //Teste larissa
+//classe que ira armazenar a base de cada cidade
 typedef struct {
     char codigo[4];
     int populacao;
@@ -15,6 +16,12 @@ typedef struct {
     float pib_per_capita;
     float superPoder;
 } Cidade;
+
+// Funcao para calcular o superPoder de cada cidade
+float calcularSuperPoder(Cidade cidade) {
+    return (cidade.populacao + cidade.area + cidade.pib + cidade.pontos_turisticos + cidade.densidade_populacional + cidade.pib_per_capita) / 6.0;
+}
+
 
 int main() {
 //variaveis que irao armazenar os dados pedidos
