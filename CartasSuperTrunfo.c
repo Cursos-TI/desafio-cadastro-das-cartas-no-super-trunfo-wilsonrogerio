@@ -21,6 +21,19 @@ typedef struct {
 float calcularSuperPoder(Cidade cidade) {
     return (cidade.populacao + cidade.area + cidade.pib + cidade.pontos_turisticos + cidade.densidade_populacional + cidade.pib_per_capita) / 6.0;
 }
+// funcao aonde os dados serao coletados para cada cidade
+void cadastrar_cidade(Cidade* cidade) {
+    printf("Código da cidade (ex: A01): ");
+    scanf("%s", cidade->codigo);
+    printf("População: ");
+    scanf("%d", &cidade->populacao);
+    printf("Área (em km²): ");
+    scanf("%f", &cidade->area);
+    printf("PIB (em bilhões): ");
+    scanf("%f", &cidade->pib);
+    printf("Número de pontos turísticos: ");
+    scanf("%d", &cidade->pontos_turisticos);
+}
 
 
 int main() {
